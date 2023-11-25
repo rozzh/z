@@ -57,11 +57,21 @@ ul {
 /* End Global Rules */
 
 /* Start Header */
+header {
+  /* for the background in landing section */
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative; 
+  /* when you are in responsive mode height will disappear for that add min-height */
+  min-height: 97px;
 }
 
 header .container::after {
@@ -88,8 +98,38 @@ header nav {
   justify-content: flex-end;
 }
 
+header .toggle-menu {
+  color: #fff;
+  font-size: 22px;
+}
+
+@media (min-width: 768px) {
+  header .toggle-menu {
+    display: none;
+  }
+}
+
 header nav ul {
   display: flex;
+}
+
+@media (max-width: 767px) {
+  header nav ul {
+    display: none;
+  }
+  header nav .toggle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* top is 100% to make the links under the icons */
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
+  }
+  header ul li a {
+    padding: 15px !important;
+  }
 }
 
 header ul li a {
