@@ -536,3 +536,55 @@ header .form i {
   text-transform: uppercase;
 }
 /* End Portfolio  */
+
+/* Start Video */
+
+.video {
+  position: relative;
+}
+
+/* overlay on the video */
+.video::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 40%);
+}
+
+.video video {
+  width: 100%;
+  /* (aspect-ratio)>search for it https://www.w3schools.com/cssref/css_pr_aspect-ratio.php */
+}
+
+.video .text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  background-color: var(--transparent-color, rgb(15 116 143 / 70%));
+  color: #fff;
+  text-align: center;
+}
+
+.video .text h2 {
+  margin: 0 0 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.video .text p {
+  margin-bottom: 30px;
+}
+
+.video button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  text-transform: uppercase;
+}
+/* End Video */
