@@ -1068,3 +1068,98 @@ header .form i {
   }
 }
 /* End Subscribe */
+
+/* Start Contact Us */
+.contact-us {
+  padding-top: var(--section-padding, 100px);
+  padding-bottom: var(--section-padding, 100px);
+}
+
+.contact-us .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .contact-us .content {
+    flex-direction: column;
+  }
+}
+
+.contact-us .content form {
+  flex-basis: 70%;
+}
+
+.contact-us form .main-input {
+  padding: 20px;
+  display: block;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.contact-us form .main-input:focus {
+  outline: none;
+}
+
+.contact-us form textarea.main-input {
+  height: 200px;
+}
+
+.contact-us form input[type="submit"] {
+  background-color: var(--main-color, #19c8fa);
+  color: #fff;
+  padding: 20px;
+  border: none;
+  display: flex;
+  margin-left: auto;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.contact-us .info {
+  flex-basis: 25%;
+}
+
+/* the great way of swap by the (order) of the flx box */
+@media (max-width: 767px) {
+  .contact-us .info {
+    order: -1;
+    text-align: center;
+  }
+}
+
+.contact-us .info h4 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.contact-us .info .phone {
+  display: block;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.contact-us .info h4:nth-of-type(2) {
+  margin-top: 90px;
+}
+
+@media (max-width: 767px) {
+  .contact-us .info h4:nth-of-type(2) {
+    margin-top: 30px;
+  }
+}
+
+.contact-us .info address {
+  color: #777;
+  line-height: 2;
+}
+
+@media (max-width: 767px) {
+  .contact-us .info address {
+    margin-bottom: 40px;
+  }
+}
+/* End Contact Us */
